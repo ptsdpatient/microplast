@@ -1,4 +1,4 @@
 const CompanyProfile = (props) => {
-    return (<div>CompanyProfile {props.mobile + ""}</div>)
+    return (<div>CompanyProfile</div>)
 }
 export default CompanyProfile
