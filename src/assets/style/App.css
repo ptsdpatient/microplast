@@ -71,10 +71,11 @@
     .formBox{
         display:flex;
         flex-direction:column;
-        width:18rem;
+        width:55%;
         height:19rem;
         margin:auto;
         margin-top:0rem;
+        margin-left:0rem;
         gap:0rem;
     }
     .formBox > input{

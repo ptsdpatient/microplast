@@ -6,7 +6,12 @@ const Footer = () => {
             <div style={{height:'26rem', width:'100%',display:'flex',justifyContent:'space-around'}}>
             <div style={{backgroundColor:'#cecece',width:'45%',height:'95%',display:'flex',flexDirection:'column'}}>
                 <p style={{width:'100%',textAlign:'center',marginTop:'1rem',marginBottom:'1rem',fontSize:'2rem'}}>Get in touch</p>
+                <div style={{width:'100%',display:'flex'}}>
                 
+                <div style={{width:'40%',height:'100%'}}>
+                <div style={{width:'85%',height:'100%',backgroundColor:'white',margin:'auto'}}></div>
+                </div>
+
                 <form className="formBox" style={{}}>
                 <input placeholder="Your Name"></input><br></br>
                 <input placeholder="Email Address"></input><br></br>
@@ -14,6 +19,9 @@ const Footer = () => {
                 <textarea className="messageBox" placeholder="Message" style={{}}></textarea><br></br>
                 <button>Submit</button>
                 </form>
+
+                </div>
+
             </div>
             
             <div style={{backgroundColor:'#cecece',width:'45%',height:'95%'}}>
