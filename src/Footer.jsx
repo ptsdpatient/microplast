@@ -1,4 +1,8 @@
 import './assets/style/App.css'
+import websiteVisitIcon from './assets/icon/website-visit.webp'
+import cementIcon from './assets/icon/cement.webp'
+import experienceIcon from './assets/icon/experience.webp'
+
 import callIcon from './assets/icon/call.webp'
 const Footer = () => {
      return (<>
@@ -9,7 +13,12 @@ const Footer = () => {
                 <div style={{width:'100%',display:'flex'}}>
                 
                 <div style={{width:'40%',height:'100%'}}>
-                <div style={{width:'85%',height:'100%',backgroundColor:'white',margin:'auto'}}></div>
+                <div style={{width:'85%',height:'100%',backgroundColor:'white',margin:'auto',display:'flex',flexDirection:'column'}}>
+                <div style={{width:'95%',height:'32%',backgroundColor:'blue',margin:'auto',display:'flex'}}><img src={websiteVisitIcon} ></img><div></div> </div>
+                <div style={{width:'95%',height:'32%',backgroundColor:'black',margin:'auto',display:'flex'}}><img src={cementIcon}></img><div></div></div>
+                <div style={{width:'95%',height:'32%',backgroundColor:'black',margin:'auto',display:'flex'}}><img src={experienceIcon}></img><div></div></div>
+
+                </div>
                 </div>
 
                 <form className="formBox" style={{}}>
