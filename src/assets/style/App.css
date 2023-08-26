@@ -10,6 +10,7 @@
     font-family: 'data';
     src: url('./data.otf')
 }
+
 .header {
     color: black;
     display: inline-flex;
@@ -76,6 +77,7 @@
         margin:auto;
         margin-top:0rem;
         margin-left:0rem;
+        margin-right:2rem;
         gap:0rem;
     }
     .formBox > input{
@@ -84,7 +86,7 @@
         text-indent:0.5rem;
     }
     .formBox > button{
-        width:5rem;
+        width:4.5rem;
         height:2rem;
         margin:auto;
     }
@@ -93,8 +95,45 @@
         padding:0.5rem;
         resize:none;
     }
+    .iconBox-footer{
+        width:85%;
+        height:100%;
+        
+        margin:0rem;
+        margin-left:0.5rem;
+        display:flex;
+        flex-direction:column;
+    }
+    .iconBox-footer > div{
+        width:95%;
+        height:32%;
+        
+        margin:auto;
+        display:flex;
+    }
     
-   
+        
+    
+   .iconBox-footer > div > img{
+    height:2.2rem;
+    width:2.2rem;
+    margin:0rem;
+    margin-left:0.5rem;
+    margin-right:1rem;
+}
+    .iconBox-footer > div > div{
+        width:100%;
+    }
+
+   .iconBox-footer > div >div > h4{
+    margin:auto;
+    font-size: 1.4rem;
+    font-weight:100;
+   }
+   .iconBox-footer > div > div > p{
+    margin:auto;
+   }
+
 html, body {
     margin: 0rem;
     padding: 0rem;
