@@ -101,6 +101,7 @@ p{
         height:6rem;
         padding-left: 0.5rem;
         padding-top:0.5rem;
+        resize:none;
     }
     .messageBox{
         height:5rem;
