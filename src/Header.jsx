@@ -18,8 +18,7 @@ const Header = (props) => {
     const [dropdownActive, setdropdownActive] = useState(false);
 
     const handleDropDown = () => {
-        setdropdownActive(dropdownActive?false:true)
-       
+        setdropdownActive(dropdownActive?false:true)      
     }
     const selectPage = () => {
         switch (page) {
@@ -36,12 +35,12 @@ const Header = (props) => {
     if (!props.mobile) {
         return (
             <>
-                <div className="header" style={{ width: '100%', backgroundColor: '#dedede', boxShadow: '2px 3px 6px 2px #808080' }}>
+                <div className="header" style={{ width: '100%',height:'7rem', backgroundColor: '#dedede', boxShadow: '2px 3px 6px 2px #808080' }}>
                     <div style={{ width: '96%', height: '100%', display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', margin: 'auto' }}>
                         <div><img alt="logo" src={logo} className="logo"></img></div>
-                        <div className="officeAddress" style={{ width: props.mobile ? '15rem' : '20rem', display: 'flex', alignItems: 'center' }}><img src={officeIcon} style={{ width: '1.6rem', height: '1.6rem', margin: '1rem', userSelect: 'none' }}></img><p className={props.truncate ? "addressTruncate" : ""}>Plot No.2, Ashok Colony, Near Telecom Nagar, Khamla, Nagpur, Maharashtra 440 025 (India)</p> </div>
-                        <div style={{ display: 'flex', alignItems: 'center' }} ><img alt="callIcon" src={callIcon} style={{ width: '1.5rem', height: '1.5rem', margin: '1rem', userSelect: 'none' }}></img> <div><p className={props.truncate ? "addressTruncate" : ""}>+91 9890916981 <br></br>+91 902169878</p></div></div>
-                        <div style={{ display: 'flex', alignItems: 'center' }}><img alt="emailIcon" src={emailIcon} style={{ width: '1.5rem', height: '1.5rem', margin: '1rem', userSelect: 'none' }} ></img> <div><p>microplastpolytex@yahoo.com<br></br> amolshamkule@hotmail.com</p></div></div>
+                        <div className="officeAddress" style={{ width: props.mobile ? '15rem' : '20rem', display: 'flex', alignItems: 'center' }}><img src={officeIcon} style={{ width: '1.6rem', height: '1.6rem', margin: '1rem', userSelect: 'none' }}></img><p className={props.truncate ? "addressTruncate" : ""} style={{fontFamily:'sans-serif'}}>Plot No.2, Ashok Colony, Near Telecom Nagar, Khamla, Nagpur, Maharashtra 440 025 (India)</p> </div>
+                        <div style={{ display: 'flex', alignItems: 'center' }} ><img alt="callIcon" src={callIcon} style={{ width: '1.5rem', height: '1.5rem', margin: '1rem', userSelect: 'none' }}></img> <div><p className={props.truncate ? "addressTruncate" : ""} style={{fontFamily:'sans-serif'}}>+91 9890916981 <br></br>+91 902169878</p></div></div>
+                        <div style={{ display: 'flex', alignItems: 'center' }}><img alt="emailIcon" src={emailIcon} style={{ width: '1.5rem', height: '1.5rem', margin: '1rem', userSelect: 'none' }} ></img> <div><p style={{fontFamily:'sans-serif'}}>microplastpolytex@yahoo.com<br></br> amolshamkule@hotmail.com</p></div></div>
 
                     </div>
                 </div>
@@ -51,19 +50,19 @@ const Header = (props) => {
         )
     } else {
         return (<>
-
-            <div className="header" style={{ width: '100%', height: '6rem', backgroundColor: '#dedede', boxShadow: '2px 3px 6px 2px #808080' }}>
+            
+            <div className="header" style={{width: '100%', height: '6rem', backgroundColor: '#dedede'}}>
                 <div style={{ display: 'flex', width: '100%', height: '100%',justifyContent:'space-between' }}>
                     <img id="dropdown" src={dropdownActive ?dropdownActiveIcon: dropdownIcon} onClick={() => { handleDropDown()} } style={{ width: 'height', height: '40%', margin: 'auto', marginLeft: '1.5rem', marginRight: '0rem', cursor: 'pointer' }}></img>
                     <img src={logo} style={{ width: 'height', height: '70%', margin: 'auto', marginLeft: '1rem', marginRight: '2.5rem', cursor: 'pointer' }}></img>
                          
                 </div>
             </div>
-            <div style={{ background: 'linear-gradient(to bottom, #dedede, #00000000)', display: dropdownActive ? 'flex' : 'none', position: 'fixed', flexDirection: 'row', width: '100%', height: '20rem', justifyContent: 'space-between', margin: 'auto', alignItems: 'flex-start', gap: '2rem' }}><div  style={{ height: '90%', margin: 'auto', marginTop: '0rem', marginLeft: '1.5rem', display: 'flex', flexDirection: 'column' }}>{pageLink.map((buttonName, key) => (<p className="underline-paragraph" style={{ margin: 'auto' }} key={key} onClick={() => { setPage(key); handleDropDown() }}>{buttonName}</p>))}</div>
+            <div style={{ zIndex:'10000',backgroundColor:'#dedede', display: dropdownActive ? 'flex' : 'none', flexDirection: 'row', width: '100%', height: '20rem', justifyContent: 'space-between', margin: 'auto', alignItems: 'flex-start', gap: '2rem' }}><div  style={{ height: '90%', margin: 'auto', marginTop: '0rem', marginLeft: '1.5rem', display: 'flex', flexDirection: 'column' }}>{pageLink.map((buttonName, key) => (<p className="underline-paragraph" style={{ margin: 'auto' }} key={key} onClick={() => { setPage(key); handleDropDown() }}>{buttonName}</p>))}</div>
                 <div style={{height:'100%',margin:'auto'} }>
-                <div className="officeAddress" style={{ width:'15rem', display: 'flex', alignItems: 'center' }}><img src={officeIcon} style={{ width: '1.6rem', height: '1.6rem', margin: '1rem', userSelect: 'none' }}></img><p>Plot No.2, Ashok Colony, Near Telecom Nagar, Khamla, Nagpur, Maharashtra 440 025 (India)</p> </div>
-                <div style={{ display: 'flex', alignItems: 'center' }} ><img alt="callIcon" src={callIcon} style={{ width: '1.5rem', height: '1.5rem', margin: '1rem', userSelect: 'none' }}></img> <div><p className={props.truncate ? "addressTruncate" : ""}>+91 9890916981 <br></br>+91 902169878</p></div></div>
-                <div style={{ display: 'flex', alignItems: 'center' }}><img alt="emailIcon" src={emailIcon} style={{ width: '1.5rem', height: '1.5rem', margin: '1rem', userSelect: 'none' }} ></img> <div><p>microplastpolytex@yahoo.com<br></br> amolshamkule@hotmail.com</p></div></div>
+                <div className="officeAddress" style={{ width:'15rem', display: 'flex', alignItems: 'center' }}><img src={officeIcon} style={{ width: '1.6rem', height: '1.6rem', margin: '1rem', userSelect: 'none' }}></img><p style={{fontFamily:'sans-serif'}}>Plot No.2, Ashok Colony, Near Telecom Nagar, Khamla, Nagpur, Maharashtra 440 025 (India)</p> </div>
+                <div style={{ display: 'flex', alignItems: 'center' }} ><img alt="callIcon" src={callIcon} style={{ width: '1.5rem', height: '1.5rem', margin: '1rem', userSelect: 'none' }}></img> <div><p style={{fontFamily:'sans-serif'}} className={props.truncate ? "addressTruncate" : ""}>+91 9890916981 <br></br>+91 902169878</p></div></div>
+                <div style={{ display: 'flex', alignItems: 'center' }}><img alt="emailIcon" src={emailIcon} style={{ width: '1.5rem', height: '1.5rem', margin: '1rem', userSelect: 'none' }} ></img> <div><p style={{fontFamily:'sans-serif'}}>microplastpolytex@yahoo.com<br></br> amolshamkule@hotmail.com</p></div></div>
                 </div>
             
             </div>
