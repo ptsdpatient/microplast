@@ -2,6 +2,13 @@ import homePageVideo from "./assets/video/homepage.mp4"
 import websiteVisitIcon from './assets/icon/visit-white.webp'
 import cementIcon from './assets/icon/cement-white.webp'
 import experienceIcon from './assets/icon/experience-white.webp'
+import productImage1 from './assets/icon/products/fertilizers-sack-removebg-preview.webp'
+import productImage2 from './assets/icon/products/ppfabrics-removebg-preview.webp'
+import productImage3 from './assets/icon/products/ppwoven-laminated-removebg-preview.webp'
+import productImage4 from './assets/icon/products/ppwovenfabrics-removebg-preview.webp'
+import productImage5 from './assets/icon/products/ppwovensacks-2-removebg-preview.webp'
+import productImage6 from './assets/icon/products/ppwovensacks-removebg-preview.webp'
+import productImage7 from './assets/icon/products/ricebags-removebg-preview.webp'
 const CompanyProfile = (props) => {
     return ( <>
     <div style={{position:'relative',width:'100%',height:'56.25%'}}>
@@ -24,6 +31,10 @@ const CompanyProfile = (props) => {
             
         </video>
        
+    </div>
+    <div style={{width:'100%',height:'auto',display:'flex',flexDirection:'column',backgroundColor:'#cecece'}}>
+        <div style={{width:'100%',justifyContent:'space-around',display:'flex',backgroundColor:'#dedede',fontSize:'2vw'}}><img src={productImage1} style={{width:'12vw',height:'10vw',margin:'1.5vw',marginLeft:'4vw',marginRight:'2vw'}}></img><div style={{width:'70%',margin:'auto',backgroundColor:'#cecece',height:'8rem'}}> <p style={{fontFamily:'sans-serif',width:'92%',height:'80%',margin:'auto'}}>We produce and provide a diverse range of Fertilizer Sacks, known for their water resistance, quality finish, and durability, made from top-notch materials and available in various sizes and types to suit client needs.</p></div></div>
+
     </div>
     </>
     )
