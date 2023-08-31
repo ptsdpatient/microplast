@@ -1,6 +1,6 @@
 @font-face{
     font-family:'title';
-    src: url('./title.ttf')
+    src: url('./title')
 }
 @font-face {
     font-family: 'highlight';
@@ -8,10 +8,10 @@
 }
 @font-face {
     font-family: 'data';
-    src: url('./data.otf')
+    src: url('./Poppins-Medium.ttf')
 }
 p{
-    font-family: serif;
+    font-family: sans-serif;
 }
 .header {
     color: black;
@@ -140,12 +140,12 @@ p{
 
    .iconBox-footer > div >div > h4{
     margin:auto;
-    font-size: 1.7rem;
+    
     font-weight:100;
    }
    .iconBox-footer > div > div > p{
     margin:auto;
-    font-size:1rem;
+   
     font-family:sans-serif;
    }
 
