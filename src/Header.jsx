@@ -11,10 +11,9 @@ import PlantMachinery from './PlantMachinery'
 import TechnicalSpecification from './TechnicalSpecification'
 import Quality from './Quality'
 import Advantages from './Advantages'
-import Contact from './Contact'
 const Header = (props) => {
     const [page, setPage] = useState(0)
-    const [pageLink] = useState(["Company", "Machinery", "Specifications", "Quality", "Benefits", "Contact"])
+    const [pageLink] = useState(["Home", "Machinery", "Specifications", "Quality", "Benefits"])
     const [dropdownActive, setdropdownActive] = useState(false);
 
     const handleDropDown = () => {
@@ -33,7 +32,6 @@ const Header = (props) => {
             case 2: return <TechnicalSpecification mobile={props.mobile} />;
             case 3: return <Quality mobile={props.mobile} />;
             case 4: return <Advantages mobile={props.mobile} />;
-            case 5: return <Contact mobile={props.mobile} />;
             default: return null;
         }
     }
