@@ -10,6 +10,7 @@ function App() {
     const handleSetMobile = () => {
         setIsMobile(window.innerWidth <768);
         setAddressTruncate(window.innerWidth < 1020)
+        document.body.style.overflowY= window.innerWidth >768?'auto':''
     }
     useEffect(() => {
         handleSetMobile()

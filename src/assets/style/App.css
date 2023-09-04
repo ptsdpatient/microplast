@@ -23,8 +23,7 @@ p{
 }
  
 .logo{
-    width:20rem;
-    height:4rem;
+
     user-select:none;
     cursor:pointer;
 }
@@ -149,6 +148,16 @@ p{
     font-family:sans-serif;
    }
 
+   .productDataDiv{
+    transition:all 0.2s ease-out;
+    cursor:pointer;
+    user-select: none;
+   } 
+   .productDataDiv:hover{
+    transform: translateY(-0.2rem);
+    box-shadow: 2px 2px 2px #535353;
+    transition: all 0.2s ease-in;
+   }
 
 
 .homePageIcon{
