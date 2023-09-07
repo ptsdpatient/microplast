@@ -8,12 +8,12 @@ import dropdownIcon from './assets/icon/menu.webp'
 import dropdownActiveIcon from './assets/icon/menu-a.webp'
 import CompanyProfile from './CompanyProfile'
 import PlantMachinery from './Machinery'
-import TechnicalSpecification from './TechnicalSpecification'
 import Quality from './Quality'
 import Advantages from './Advantages'
+import Client from './Client'
 const Header = (props) => {
     const [page, setPage] = useState(0)
-    const [pageLink] = useState(["Home", "Machinery", "Specifications", "Quality", "Contact us"])
+    const [pageLink] = useState(["Home", "Machinery","Advantages", "Quality", "Clients"])
     const [dropdownActive, setdropdownActive] = useState(false);
 
     const handleDropDown = () => {
@@ -29,9 +29,10 @@ const Header = (props) => {
         switch (page) {
             case 0: return <CompanyProfile mobile={props.mobile} />;
             case 1: return <PlantMachinery mobile={props.mobile} />;
-            case 2: return <TechnicalSpecification mobile={props.mobile} />;
+            case 2: return <Advantages mobile={props.mobile} />;
             case 3: return <Quality mobile={props.mobile} />;
-            case 4: return <Advantages mobile={props.mobile} />;
+            case 4: return <Client mobile={props.mobile} />
+            
             default: return null;
         }
     }
