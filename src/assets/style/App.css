@@ -17,7 +17,6 @@ p{
     color: black;
     display: inline-flex;
     background-color:#dedede; 
- 
     margin: auto;
     font-family: 'Segoe UI'
 }
@@ -163,8 +162,7 @@ p{
 .homePageIcon{
     width:100%;
     height:100%;   
-    margin:auto;
-    margin-top:5%;
+    
     display:flex;
     flex-direction:row;
     justify-content:space-around;
@@ -207,4 +205,19 @@ html, body {
 
 .w{
     color:#cecece
+}
+
+.machinery{
+    width:100%;
+    background-color: #dedede;
+}
+
+.machinery > div > p{
+    margin:auto;
+}
+
+.machineTitle{
+    position:absolute;
+    top:12rem;
+    text-align: center;
 }

@@ -6,7 +6,7 @@ import Footer from './Footer'
 function App() {
      const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
     const [addressTruncate, setAddressTruncate] = useState(window.innerWidth < 1020)
-    var dropIcon = document.getElementById('dropdown');
+    
     const handleSetMobile = () => {
         setIsMobile(window.innerWidth <768);
         setAddressTruncate(window.innerWidth < 1020)
@@ -19,13 +19,7 @@ function App() {
             window.removeEventListener("resize",handleSetMobile)
         }
     }, [])
-    useEffect(() => {
-        if (dropIcon) {
-            dropIcon.onClick = () => {
-                alert("yes");
-            }
-        }
-    }, [])
+   
    
 
 
