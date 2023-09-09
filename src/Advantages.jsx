@@ -1,10 +1,10 @@
-const Advantages = () => {
+const Advantages = (props) => {
     return (<>
-    <div className="advantages">
+    <div className="advantages" style={{backgroundColor:'#dedede',padding:'1rem'}}>
     
-    <div style={{margin:'auto'}}><p style={{textAlign:'center'}}>The Microplast Advantage</p></div>
-    <div style={{width:'90%',margin:'auto'}}><p>We are dedicated to crafting and advancing a cutting-edge array of packaging solutions, including the finest PP Woven Fabric and Polypropylene Woven Sacks, catering to a multitude of industries. Our unwavering commitment to attaining unparalleled excellence across every facet of our enterprise has perpetually ignited our ascent in the fiercely competitive global arena.</p></div>
-    <div style={{width:'90%',margin:'auto'}}><p>However, our core competence lies in the following factors:.</p></div>
+    <div style={{margin:'auto'}}><p style={{textAlign:'center',fontSize:props.mobile?'6vw':'3vw',margin:'0rem'}}>The Microplast Advantage</p></div>
+    <div style={{width:'90%',margin:'auto'}}><p style={{textAlign:'center'}}>We are dedicated to crafting and advancing a cutting-edge array of packaging solutions, including the finest PP Woven Fabric and Polypropylene Woven Sacks, catering to a multitude of industries. Our unwavering commitment to attaining unparalleled excellence across every facet of our enterprise has perpetually ignited our ascent in the fiercely competitive global arena.</p></div>
+    <div style={{width:'85%',margin:'auto'}}><p >However, our core competence lies in the following factors:.</p></div>
     <div style={{width:'90%',margin:'auto'}}>
     <ul>
     <li><strong>Unparalleled Work Environment:</strong> A professional atmosphere that fosters excellence.</li>

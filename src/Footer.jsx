@@ -17,7 +17,7 @@ const Footer = (props) => {
                 <br></br>
             <div style={{height:props.mobile?'52rem':'26rem', width:'100%',display:'flex',justifyContent:'space-around',flexDirection:props.mobile?'column':'row'}}>
             <div style={{width:props.mobile?'100%':'50%',height:'95%',display:'flex',flexDirection:'column'}}>
-                <p style={{width:'100%',fontFamily:'sans-serif',textAlign:'center',marginTop:'1rem',marginBottom:'1.8rem',fontSize:'2rem'}}>Get in touch</p>
+                <p style={{width:'100%',fontFamily:'sans-serif',textAlign:'center',marginTop:'1rem',marginBottom:'1.8rem',fontSize:props.mobile?'5vw':'3vw'}}>Get in touch</p>
                 <div style={{width:'100%',display:'flex'}}>
                 
                 <div style={{width:'40%',height:'100%'}}>
@@ -51,10 +51,10 @@ const Footer = (props) => {
 
             <div style={{width:'100%',height:'0.2rem',backgroundColor:'#aeaeae'}}></div>
             <div style={{display:'flex',justifyContent:'space-between',width:'95%',height:'4.5rem',margin:'auto',alignItems:'center'}}> 
-            <p style={{fontFamily:'sans-serif',fontSize:props.mobile?'0.8rem':'1rem' }}>© Copyright 2023. All Rights Reserved. Designed by Tanishq Dhote</p>
+            <p style={{fontFamily:'sans-serif',fontSize:props.mobile?'4vw':'1.5vw' }}>© Copyright 2023. All Rights Reserved. Designed by Tanishq Dhote</p>
             <div style={{width:'12rem' ,display:'flex',flexDirection:'row',justifyContent:'space-around',alignItems:'center'}}>
             <img alt="callIcon" src={callIcon} style={{ width: '1.5rem', height: '1.5rem', margin: '1rem', userSelect: 'none' }}></img>
-            <p style={{fontFamily:'sans-serif',width:'100%',fontSize:props.mobile?'0.8rem':'1rem'}}>9359721860</p>
+            <p style={{fontFamily:'sans-serif',width:'100%',fontSize:props.mobile?'4vw':'1.5vw'}}>9359721860</p>
             </div>
             
             </div>

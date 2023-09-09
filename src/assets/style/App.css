@@ -221,3 +221,21 @@ html, body {
     top:12rem;
     text-align: center;
 }
+
+.client > div > div{
+    gap:5vw
+}
+client > div > div >img{
+    transition:all 0.5s;
+}
+.client > div > div >img:hover{
+    cursor:pointer;
+    transform:translateY(-1vw);
+    transition:all 0.5s;
+}
+li{
+    font-family: 'data'
+}
+.advantages > div > p {
+    font-family: 'data'
+}
