@@ -10,8 +10,6 @@ const Footer = (props) => {
 
     const [officeMapSelection,setOfficeMapSelection] = useState(false)
 
-
-
      return (<>
             <div style={{width:'100%',height:props.mobile?'58rem':'32rem',backgroundColor:'#dedede'}}>
                 <br></br>
@@ -48,10 +46,10 @@ const Footer = (props) => {
 
             <div style={{width:'100%',height:'0.2rem',backgroundColor:'#aeaeae'}}></div>
             <div style={{display:'flex',justifyContent:'space-between',width:'95%',height:'4.5rem',margin:'auto',alignItems:'center'}}> 
-            <p style={{fontFamily:'sans-serif',fontSize:props.mobile?'3vw':'1.5vw' }}>© Copyright 2023. All Rights Reserved. Designed by Tanishq Dhote</p>
+            <p style={{fontFamily:'sans-serif',fontSize:props.mobile?'3.3vw':'1.5vw' }}>© Copyright 2023. All Rights Reserved. Designed by Tanishq Dhote</p>
             <div style={{width:'12rem' ,display:'flex',flexDirection:'row',justifyContent:'space-around',alignItems:'center'}}>
             <img alt="callIcon" src={callIcon} style={{ width: '1.5rem', height: '1.5rem', margin: '1rem', userSelect: 'none' }}></img>
-            <p style={{fontFamily:'sans-serif',width:'100%',fontSize:props.mobile?'3vw':'1.5vw'}}>9359721860</p>
+            <p style={{fontFamily:'sans-serif',width:'100%',fontSize:props.mobile?'3.3vw':'1.5vw'}}>9359721860</p>
             </div>
             
             </div>

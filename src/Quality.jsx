@@ -1,6 +1,4 @@
 const Quality = (props) => {
-
-
     const styles = {
         container: {
           fontFamily: 'Arial, sans-serif',
@@ -11,12 +9,12 @@ const Quality = (props) => {
         },
         heading: {
           fontSize: '24px',
-          color: '#333',
+          color: 'black',
           marginBottom: '10px',
         },
         paragraph: {
           fontSize: '16px',
-          color: '#555',
+          color: 'black',
           lineHeight: '1.4',
           marginBottom: '15px',
         },

@@ -38,10 +38,6 @@ const Client = (props) => {
         fontFamily:'data'
       };
     
-      const evenRowStyle = {
-        backgroundColor: '#f2f2f2',
-      };
-    
       const linkStyle = {
         textDecoration: 'none',
         color: '#007BFF',
@@ -50,9 +46,9 @@ const Client = (props) => {
     return (<>
     
     <div className="client" style={{width:'100%',backgroundColor:'#dedede'}}>
-    <div style={{width:'100%',display:'flex',justifyContent:'space-around'}}><p className="underline-paragraph" style={{textAlign:'center',fontSize:props.mobile?'1.5rem':'2.5rem',marginBottom:'1.5rem'}}>Our Trusted Clients</p></div>
+    <div style={{width:'100%',display:'flex',justifyContent:'space-around'}}><p className="underline-paragraph" style={{textAlign:'center',fontSize:props.mobile?'7vw':'3.5vw',marginBottom:'1.5vw'}}>Our Trusted Clients</p></div>
        
-    <div style={{width:'80%',margin:'auto',textAlign:'center'}}><p style={{textAlign:'center',fontFamily:'data',paddingBottom:'4vw',fontSize:props.mobile?'4vw':'1.5vw'}}>Discover our prestigious clients, featuring industry giants such as Godrej Agrovet Ltd, ITC Limited, IFFCO, Sneha Foods & Feeds Pvt Ltd, and Sriram Foods Pvt Ltd. Learn how we partner with these industry leaders to deliver cutting-edge packaging solutions while upholding our unwavering dedication to sustainability and environmental stewardship.</p></div>
+    <div style={{width:'80%',margin:'auto',textAlign:'center'}}><p style={{textAlign:'center',fontFamily:'data',paddingBottom:'4vw',fontSize:props.mobile?'4vw':'1.5vw'}}>We work with some of the biggest names in the industry, including Godrej Agrovet Ltd, ITC Limited, IFFCO, Sneha Foods & Feeds Pvt Ltd, and Sriram Foods Pvt Ltd. We help these companies by providing them with innovative packaging solutions that are environmentally friendly.</p></div>
     <div style={{marginTop:props.mobile?'6vw':'3vw',width:props.mobile?'60%':'40%',display:'flex',flexDirection:'column',height:'auto',flexWrap:'wrap',justifyContent:'space-evenly',alignContent:'center',alignItems:'center',margin:'auto'}}>
     <div style={{display:'flex',flexDirection:'column',gap:'0rem',paddingBottom:'3vw'}}><img src={client1} style={{width:props.mobile?'50vw':'25vw',height:props.mobile?'12vw':'6vw',alignItems:'center'}}></img><p style={{textAlign:'center',fontFamily:'data',fontSize:props.mobile?'4vw':'2vw'}}>Godrej Agrovet Ltd</p></div>
     <div style={{display:'flex',flexDirection:'column',gap:'0rem',paddingBottom:'3vw'}}><img src={client2} style={{width:props.mobile?'36vw':'18vw',height:props.mobile?'16vw':'8vw'}}></img><p style={{textAlign:'center',fontFamily:'data',fontSize:props.mobile?'4vw':'2vw'}}>ITC Limited</p></div>
