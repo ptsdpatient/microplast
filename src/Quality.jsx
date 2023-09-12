@@ -1,10 +1,51 @@
 const Quality = (props) => {
+
+
+    const styles = {
+        container: {
+          fontFamily: 'Arial, sans-serif',
+          backgroundColor: '#f7f7f7',
+          padding: '20px',
+          borderRadius: '8px',
+          boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
+        },
+        heading: {
+          fontSize: '24px',
+          color: '#333',
+          marginBottom: '10px',
+        },
+        paragraph: {
+          fontSize: '16px',
+          color: '#555',
+          lineHeight: '1.4',
+          marginBottom: '15px',
+        },
+      };
+
     return (<>
-        <div style={{backgroundColor:'#dedede',padding:'1rem'}}>
-        <div style={{margin:'auto'}}><p style={{textAlign:'center',fontSize:props.mobile?'6vw':'3vw',margin:'0rem',fontFamily:'data'}}>Quality Assurance</p></div>
+        <div style={{backgroundColor:'#dedede',paddingBottom:'1rem',position:'relative'}}>
+        <div>
+        <div style={{width:'100%',display:'flex',justifyContent:'space-around'}}><p className="underline-paragraph" style={{textAlign:'center',fontSize:props.mobile?'1.8rem':'2.5rem',margin:'0rem',padding:'0.5rem'}}>Quality Assurance</p></div>
         <div style={{width:'90%',margin:'auto'}}>
-        <p style={{textAlign:'center',fontFamily:'data'}}>Our fabric production process stands as a paragon of excellence, meticulously governed by stringent quality control procedures. Through these rigorous checks, we unfailingly present our discerning customers with products that transcend technical expectations, boasting an astonishing defect rate of less than 1%. The very essence of our polypropylene fabric lies in its hydrophobic nature, steadfastly repelling moisture and whisking away perspiration from the skin. Our manufacturing prowess, underpinned by state-of-the-art machinery and a customer-centric approach, empowers us to craft fabrics that effortlessly meet and exceed the exacting demands of our esteemed clientele. <br></br>Quality at Microplast is not a mere coincidence; it emerges as a harmonious symphony of unwavering dedication, astute guidance, and expert execution throughout our entire production journey. We meticulously adhere to a meticulously defined quality management system, starting from the meticulous procurement of raw materials and culminating in the flawless dispatch of our products. Our chosen materials are fortified with UV stabilizers, rendering them impervious to the ravages of ultraviolet rays. At every stage of production, our seasoned quality control professionals wield their expertise to orchestrate impeccable task execution.<br></br>Bolstered by cutting-edge machinery, our production unit is an epicenter of continuous innovation and refinement. We harness the capabilities of cutting-edge sewing machines, ensuring both safety and enduring durability in every stitch. Impeccable printing quality and unmatched clarity are achieved through the use of indelible ink. Only after an uncompromising quest for perfection, unyielding testing, and painstaking inspection, is a batch of our products deemed fit for delivery.<br></br>Yet, our commitment to quality extends far beyond the confines of our products; it encompasses our services as well. We pledge to our clients prompt, world-spanning delivery services that are as impeccable as the products themselves. At Microplast, quality is not a destination; it is an unwavering journey towards excellence that we undertake, ensuring that our customers receive nothing but the very best, every time.</p>
-            
+        <div style={styles.container}>
+      <h2 style={{...styles.heading,margin:'0rem'}}>Our Commitment to Quality</h2>
+      <p style={styles.paragraph}>
+        At Microplast, we are dedicated to providing our customers with the best products and services. Our quality control procedures ensure that our products exceed expectations with a defect rate of less than 1%.
+      </p>
+      <p style={styles.paragraph}>
+        Our hydrophobic polypropylene fabric keeps you dry by repelling moisture and wicking away perspiration from your skin. We use state-of-the-art machinery and a customer-centric approach to craft fabrics that meet your demands.
+      </p>
+      <p style={styles.paragraph}>
+        Quality at Microplast is a result of dedication, guidance, and expert execution throughout our production journey. We meticulously manage quality from raw materials to dispatch, fortified with UV stabilizers to protect against UV rays.
+      </p>
+      <p style={styles.paragraph}>
+        Our production unit, equipped with cutting-edge machinery, ensures safety, durability, impeccable printing quality, and unmatched clarity. Every product batch undergoes rigorous testing and inspection.
+      </p>
+      <p style={styles.paragraph}>
+        Our commitment to quality extends to our services. We provide prompt worldwide delivery services, ensuring excellence in every aspect. At Microplast, quality is our unwavering journey towards excellence.
+      </p>
+    </div>
+        </div>
         </div>
         </div>
         </>)
