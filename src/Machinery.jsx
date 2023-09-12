@@ -23,9 +23,9 @@ const Machinery = (props) => {
     return (<>
     <div className="machinery" style={{paddingTop:'1rem'}}>
     <div style={{width:'100%',display:'flex',justifyContent:'space-around'}}><p style={{textAlign:'center',fontSize:props.mobile?'1.5rem':'2.5rem',marginBottom:'1.5rem',fontFamily:'data',fontWeight:'bolder'}}>Our Advanced Machinery</p></div>
-    <div style={{width:'90%',margin:'auto'}}><p style={{textAlign:'center',fontSize:props.mobile?'3.5vw':'1.5vw',margin:'0rem',fontFamily:'data'}}>Discover Microplast Polytex's advanced machinery lineup, featuring bag conversion lines, flexographic printers, JP extrusion machines, tape stretching lines, and more. Our cutting-edge technology crafts premium products such as fertilizer sacks, rice bags, PP woven sacks, laminated gusseted bags, and PP fabrics, guaranteeing precision and efficiency throughout production for superior plastic bag solutions across industries.</p></div>
-    
-   
+    <div style={{width:'90%',margin:'auto'}}><p style={{textAlign:'center',fontSize:props.mobile?'3.5vw':'1.5vw',margin:'0rem',fontFamily:'data'}}>Explore Microplast Polytex's state-of-the-art machines, which make things like bags and fabrics. We use advanced technology to create high-quality products like bags for fertilizer and rice, as well as fabrics made from plastic. Our machines are really good at making these things efficiently and accurately, so we can provide top-notch plastic bag solutions for various industries.</p></div>
+    <div style={{width:'90%',margin:'auto'}}><div style={{position:'relative',width:props.mobile?'100%':'50%',margin:'auto'}}><img src={machine1} style={{width:'100%'}}></img><p style={{position:'absolute',top:'30vw',left:'10vw',fontSize:props.mobile?'4vw':'2.5vw',color:'snow',textShadow:'2px 2px 2px black'}}>Bag Conversion Line</p></div></div>
+
     </div>
     
     </>)
