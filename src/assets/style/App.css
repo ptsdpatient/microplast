@@ -35,6 +35,10 @@ p{
     margin: auto;
 }
 
+
+
+  
+
 .underline-paragraph {
     position: relative;
     gap:3rem;
@@ -92,7 +96,23 @@ p{
       .animated-underline:hover::before {
         width: 100%;
       }
+    
+
       
+    .container {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+    }
+
+    .equipment-list {
+        list-style-type: disc;
+        margin-left: 20px;
+    }
+
+    .equipment-item {
+        margin-bottom: 10px;
+    }
+
     .formBox{
         display:flex;
         flex-direction:column;

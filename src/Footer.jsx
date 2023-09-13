@@ -6,8 +6,9 @@ import experienceIcon from './assets/icon/experience.webp'
 import officeIcon from './assets/icon/office.webp'
 import callIcon from './assets/icon/call.webp'
 import {useState} from 'react'  
+import views from './data.json'
 const Footer = (props) => {
-
+    alert(views)
     const [officeMapSelection,setOfficeMapSelection] = useState(false)
 
      return (<>
