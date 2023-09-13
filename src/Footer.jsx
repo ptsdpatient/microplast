@@ -6,9 +6,9 @@ import experienceIcon from './assets/icon/experience.webp'
 import officeIcon from './assets/icon/office.webp'
 import callIcon from './assets/icon/call.webp'
 import {useState} from 'react'  
-import views from './data.json'
+import jsonData from './data.json'
 const Footer = (props) => {
-    alert(views)
+    const viewsData = jsonData.find(item => 'views' in item);
     const [officeMapSelection,setOfficeMapSelection] = useState(false)
 
      return (<>
@@ -20,7 +20,7 @@ const Footer = (props) => {
                 <div style={{width:'100%',display:'flex'}}>
                 <div style={{width:'40%',height:'100%'}}>
                 <div className="iconBox-footer">
-                <div ><img src={websiteVisitIcon}></img><div style={{overflowX:props.mobile?'auto':'hidden'}}><h4 style={{fontSize:'1.5rem'}}>8732</h4><p style={{fontSize:'1rem'}}>visits</p></div> </div>
+                <div ><img src={websiteVisitIcon}></img><div style={{overflowX:props.mobile?'auto':'hidden'}}><h4 style={{fontSize:'1.5rem'}}>{viewsData.views}</h4><p style={{fontSize:'1rem'}}>visits</p></div> </div>
                 <div><img src={cementIcon}></img><div style={{overflowX:props.mobile?'auto':'hidden'}}><h4 style={{fontSize:'1.5rem'}}>8M</h4><p style={{fontSize:'1rem'}}>products produced</p></div></div>
                 <div><img src={experienceIcon}></img><div style={{overflowX:props.mobile?'auto':'hidden'}}><h4 style={{fontSize:'1.5rem'}}>15Y</h4><p style={{fontSize:'1rem'}}>experience</p></div></div>
                 </div>

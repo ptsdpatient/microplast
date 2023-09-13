@@ -11,13 +11,17 @@ import PlantMachinery from './Machinery'
 import Quality from './Quality'
 import Advantages from './Advantages'
 import Client from './Client'
+import jsonData from './data.json'
 const Header = (props) => {
+    const viewsData = jsonData.find(item => 'views' in item);
     const [page, setPage] = useState(0)
     const [pageLink] = useState(["Home", "Machinery","Advantages", "Quality", "Clients"])
     const [dropdownActive, setdropdownActive] = useState(false);
 
     const handleDropDown = () => {
-        setdropdownActive(dropdownActive?false:true)      
+        setdropdownActive(dropdownActive?false:true)  
+        
+        
     }
     
     useEffect(()=>{
@@ -43,7 +47,7 @@ const Header = (props) => {
                 <div className="header" style={{ width: '100%',height:'7rem', backgroundColor: '#dedede', boxShadow: '2px 3px 6px 2px #808080',overflowX:'auto' }}>
                     <div style={{ width: '96%', height: '100%', display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', margin: 'auto' }}>
                         <div><img alt="logo" src={logo} className="logo" style={{height:props.mobile?'4vw':'4.5vw',width:props.mobile?'4vw':'22vw'}}></img></div>
-                        <div style={{ width: props.mobile ? '15rem' : '20rem', display: 'flex', alignItems: 'center' }}><img src={officeIcon} style={{ width: '1.6rem', height: '1.6rem', margin: '1rem', userSelect: 'none' }}></img><p className={props.truncate ? "addressTruncate" : ""} style={{fontFamily:'sans-serif',fontSize:'1rem'}}>Plot No.2, Ashok Colony, Near Telecom Nagar, Khamla, Nagpur, Maharashtra 440 025 (India)</p> </div>
+                        <div style={{ width: props.mobile ? '15rem' : '20rem', display: 'flex', alignItems: 'center' }}><img src={officeIcon} style={{ width: '1.6rem', height: '1.6rem', margin: '1rem', userSelect: 'none' }}></img><p className={props.truncate ? "addressTruncate" : ""} style={{fontFamily:'sans-serif',fontSize:'1rem'}}> Plot No.2, Ashok Colony, Near Telecom Nagar, Khamla, Nagpur, Maharashtra 440 025 (India)</p> </div>
                         <div style={{ display: 'flex', alignItems: 'center' }} ><img alt="callIcon" src={callIcon} style={{ width: '1.5rem', height: '1.5rem', margin: '1vw', userSelect: 'none' }}></img> <div><p className={props.truncate ? "addressTruncate" : ""} style={{fontFamily:'sans-serif',fontSize:'1rem'}}>+91 9890916981 <br></br>+91 9021698788</p></div></div>
                         <div style={{ display: 'flex', alignItems: 'center' }}><img alt="emailIcon" src={emailIcon} style={{ width: '1.5rem', height: '1.5rem', margin: '1vw', userSelect: 'none' }} ></img> <div><p style={{fontFamily:'sans-serif',fontSize:'1rem'}}>microplastpolytex@yahoo.com<br></br> amolshamkule@hotmail.com</p></div></div>
 

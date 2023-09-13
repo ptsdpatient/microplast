@@ -4,7 +4,8 @@ import Header from './Header'
 import Footer from './Footer'
 
 function App() {
-     const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+   
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
     const [addressTruncate, setAddressTruncate] = useState(window.innerWidth < 1020)
     
     const handleSetMobile = () => {
