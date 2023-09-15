@@ -8,12 +8,12 @@ const Quality = (props) => {
           boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
         },
         heading: {
-          fontSize: '24px',
+          fontSize: props.mobile?'4.5vw':'3vw',
           color: 'black',
           marginBottom: '10px',
         },
         paragraph: {
-          fontSize: '16px',
+          fontSize: props.mobile?'3.5vw':'2vw',
           color: 'black',
           lineHeight: '1.4',
           marginBottom: '15px',
@@ -23,7 +23,7 @@ const Quality = (props) => {
     return (<>
         <div style={{backgroundColor:'#dedede',paddingBottom:'1rem',position:'relative'}}>
         <div>
-        <div style={{width:'100%',display:'flex',justifyContent:'space-around'}}><p className="underline-paragraph" style={{textAlign:'center',fontSize:props.mobile?'1.8rem':'2.5rem',margin:'0rem',padding:'0.5rem'}}>Quality Assurance</p></div>
+        <div style={{width:'100%',display:'flex',justifyContent:'space-around'}}><p className="underline-paragraph" style={{fontFamily:'data',textAlign:'center',fontSize:props.mobile?'1.8rem':'2.5rem',margin:'0.5rem',padding:'0.5rem'}}>Quality Assurance</p></div>
         <div style={{width:'90%',margin:'auto'}}>
         <div style={styles.container}>
       <h2 style={{...styles.heading,margin:'0rem'}}>Our Commitment to Quality</h2>

@@ -6,11 +6,43 @@ import experienceIcon from './assets/icon/experience.webp'
 import officeIcon from './assets/icon/office.webp'
 import callIcon from './assets/icon/call.webp'
 import {useState} from 'react'  
+import axios from 'axios';
 import jsonData from './data.json'
 const Footer = (props) => {
-    const viewsData = jsonData.find(item => 'views' in item);
-    const [officeMapSelection,setOfficeMapSelection] = useState(false)
 
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        phone: '',
+        subject: '',
+        message: '',
+      });
+    
+      const handleSubmit = async (e) => {
+        e.preventDefault(); // Prevent the default form submission behavior
+    
+        try {
+          // Send a POST request to your server
+          const response = await axios.post('/send-email', formData);
+          console.log(response.data);
+          alert('Your form was sent successfully')
+          // Handle success or redirect the user as needed
+        } catch (error) {
+          console.error(error);
+          alert('Your form was sent successfully')
+          // Handle errors
+        }
+      };
+    
+      const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData({ ...formData, [name]: value });
+      };
+    
+
+    
+    const [officeMapSelection,setOfficeMapSelection] = useState(false)
+    
      return (<>
             <div style={{width:'100%',height:props.mobile?'58rem':'32rem',backgroundColor:'#dedede'}}>
                 <br></br>
@@ -20,16 +52,19 @@ const Footer = (props) => {
                 <div style={{width:'100%',display:'flex'}}>
                 <div style={{width:'40%',height:'100%'}}>
                 <div className="iconBox-footer">
-                <div ><img src={websiteVisitIcon}></img><div style={{overflowX:props.mobile?'auto':'hidden'}}><h4 style={{fontSize:'1.5rem'}}>{viewsData.views}</h4><p style={{fontSize:'1rem'}}>visits</p></div> </div>
-                <div><img src={cementIcon}></img><div style={{overflowX:props.mobile?'auto':'hidden'}}><h4 style={{fontSize:'1.5rem'}}>8M</h4><p style={{fontSize:'1rem'}}>products produced</p></div></div>
+                <div ><img src={websiteVisitIcon}></img><div style={{overflowX:props.mobile?'auto':'hidden'}}><h4 style={{fontSize:'1.5rem'}}>3.7☆</h4><p style={{fontSize:'1rem'}}>rating</p></div> </div>
+                <div><img src={cementIcon}></img><div style={{overflowX:props.mobile?'auto':'hidden'}}><h4 style={{fontSize:'1.5rem'}}>30L</h4><p style={{fontSize:'1rem'}}>products produced</p></div></div>
                 <div><img src={experienceIcon}></img><div style={{overflowX:props.mobile?'auto':'hidden'}}><h4 style={{fontSize:'1.5rem'}}>15Y</h4><p style={{fontSize:'1rem'}}>experience</p></div></div>
                 </div>
                 </div>
-                <form className="formBox">
-                <input placeholder="Your Name"></input><br></br>
-                <input placeholder="Email Address"></input><br></br>
-                <input placeholder="Phone Number"></input><br></br>
-                <textarea placeholder="Message"></textarea><br></br>
+
+
+                <form className="formBox" onSubmit={handleSubmit} style={{gap:'10px'}}>
+                <input type="text" name="name" id="name" placeholder="Your Name" value={formData.name} onChange={handleChange} required></input>
+                <input type="email" name="email" id="email" placeholder="Email Address" value={formData.email} onChange={handleChange} required></input>
+                <input type="text" name="phone" id="phone" placeholder="Phone Number" value={formData.phone} onChange={handleChange}></input>
+                <input type="text" name="subject" id="subject" placeholder="Subject" value={formData.subject} onChange={handleChange}></input>
+                <textarea type="text" name="message" id="message" placeholder="Message" value={formData.message} onChange={handleChange} required></textarea>
                 <button>Submit</button>
                 </form>
 
@@ -46,11 +81,14 @@ const Footer = (props) => {
             </div>
 
             <div style={{width:'100%',height:'0.2rem',backgroundColor:'#aeaeae'}}></div>
-            <div style={{display:'flex',justifyContent:'space-between',width:'95%',height:'4.5rem',margin:'auto',alignItems:'center'}}> 
+            <div style={{display:'flex',flexDirection:props.mobile?'column':'row',justifyContent:'space-between',width:'95%',height:props.mobile?'7rem':'4.5rem',margin:'auto',alignItems:'center',backgroundColor:'#dedede'}}> 
+            
             <p style={{fontFamily:'sans-serif',fontSize:props.mobile?'3.3vw':'1.5vw' }}>© Copyright 2023. All Rights Reserved. Designed by Tanishq Dhote</p>
-            <div style={{width:'12rem' ,display:'flex',flexDirection:'row',justifyContent:'space-around',alignItems:'center'}}>
+            
+            <div style={{backgroundColor:'#dedede',display:'flex',flexDirection:'row',justifyContent:'center',alignItems:'center'}}>
             <img alt="callIcon" src={callIcon} style={{ width: '1.5rem', height: '1.5rem', margin: '1rem', userSelect: 'none' }}></img>
-            <p style={{fontFamily:'sans-serif',width:'100%',fontSize:props.mobile?'3.3vw':'1.5vw'}}>9359721860</p>
+            <p style={{fontFamily:'sans-serif',fontSize:props.mobile?'3.3vw':'1.5vw'}}>+91 9359721860</p>
+           
             </div>
             
             </div>

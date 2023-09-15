@@ -11,12 +11,8 @@ import productImage5 from './assets/icon/products/ppwovensacks-2-removebg-previe
 import productImage6 from './assets/icon/products/ppwovensacks-removebg-preview.webp'
 import productImage7 from './assets/icon/products/ricebags-removebg-preview.webp'
 import companyData from './data.json'
-import {useState} from 'react'
 const CompanyProfile = (props) => {
     const views = companyData[0].views;
-    const bags = companyData[1].bags;
-    const exp = companyData[2].exp;
-
     return ( <>
     <div style={{position:'relative',width:'100%',height:'56.25%'}}>
         
@@ -24,9 +20,9 @@ const CompanyProfile = (props) => {
         <p style={{width:'100%',marginTop:props.mobile?'0.5rem':'3rem',marginBottom:'1%',textAlign:'center',height:'100%',fontSize:props.mobile?'5vw':'3.8vw',color:'snow',textShadow:'0px 3px 2px black',userSelect:'none'}}>Welcome to M/s Microplast Polytex Industries Pvt. Ltd.</p>
         <p style={{width:props.mobile?'100%':'80%',fontFamily:'sans-serif',textAlign:'center',margin:'auto',marginTop:props.mobile?'1%':'3%',height:'100%',fontSize:props.mobile?'3.5vw':'3vw',color:'snow',textShadow:'0px 3px 2px black',userSelect:'none'}}>Microplast Polytex Industries Pvt. Ltd., based in Jamb, Maharashtra, India, is a cutting-edge plastic bag production company. Specializing in P.P. Woven Sacks, Fabrics, Bags, Valve Type Bags, and Gusseted Bags, they're strategically located just 65 km from Nagpur. Equipped with state-of-the-art machinery, they guarantee top-notch quality.</p>
         <div className="homePageIcon" style={{marginTop:props.mobile?'2%':'3%'}}>
-                <div ><img src={websiteVisitIcon}></img><div><h4>{views}</h4></div> </div>
-                <div><img src={cementIcon}></img><div><h4>{bags}M</h4></div></div>
-                <div><img src={experienceIcon}></img><div><h4>{exp}Y</h4></div></div>
+                <div ><img src={websiteVisitIcon}></img><div><h4>3.7★</h4></div> </div>
+                <div><img src={cementIcon}></img><div><h4>30L</h4></div></div>
+                <div><img src={experienceIcon}></img><div><h4>15Y</h4></div></div>
         </div>
         
         </div>
